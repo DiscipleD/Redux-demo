@@ -1,0 +1,9 @@
+<div>
+	<ul style="list-style: none">
+		<li ng-repeat="item in $ctrl.todoList track by $index">
+			<label ng-style="{ textDecoration: item.completed ? 'line-through' : 'none',
+													cursor: item.completed ? 'default' : 'pointer' }"
+			       ng-click="$ctrl.toggleTodoFn({index: $index})">{{item.text}}</label>
+		</li>
+	</ul>
+</div>
