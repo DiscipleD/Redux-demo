@@ -4,7 +4,7 @@
 
 import angular from 'angular'
 
-import components from '../components'
-import todoContainer from './todos'
+import components from './components'
+import todoContainer from './app'
 
 angular.module('todoApp', [components, todoContainer])

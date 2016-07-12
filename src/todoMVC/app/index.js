@@ -3,8 +3,8 @@
  */
 
 import angular from 'angular'
-import template from './todos.html'
-import controller from './todos'
+import template from './todoMVC.html'
+import controller from './todoMVC'
 
 const todoContainer = {
 	controller,

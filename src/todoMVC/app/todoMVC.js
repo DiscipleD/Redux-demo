@@ -2,9 +2,9 @@
  * Created by jack on 16-7-5.
  */
 
-import store from '../../store'
+import store from '../store'
 
-import actions from '../../actions'
+import actions from '../actions'
 
 export default class TodosContainController {
 

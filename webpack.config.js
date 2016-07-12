@@ -10,13 +10,13 @@ const DISTPATH = path.join(__dirname, 'build');
 
 module.exports = {
 	devtool: 'source-map',
-	entry: [
-		SOURCEPATH + '/app/app.js'
-	],
+	entry: {
+		todoMVC: [SOURCEPATH + '/todoMVC/index.js']
+	},
 	output:  {
 		path: DISTPATH,
 		publicPath: '/',
-		filename: 'bundle.js'
+		filename: '[name].bundle.js'
 	},
 	resolve: {
 		extensions: ['', '.js']
@@ -24,7 +24,12 @@ module.exports = {
 	plugins: [
 		new webpack.optimize.OccurenceOrderPlugin(),
 		new HtmlWebpackPlugin({
-			template: SOURCEPATH + '/index.html'
+			template: SOURCEPATH + '/index.html',
+			inject: false
+		}),
+		new HtmlWebpackPlugin({
+			template: SOURCEPATH + '/todoMVC/index.html',
+			filename: 'todoMVC.html'
 		}),
 		new webpack.NoErrorsPlugin()
 	],
