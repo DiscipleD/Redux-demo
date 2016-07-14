@@ -11,7 +11,8 @@ const DISTPATH = path.join(__dirname, 'build');
 module.exports = {
 	devtool: 'source-map',
 	entry: {
-		todoMVC: [SOURCEPATH + '/todoMVC/index.js']
+		todoMVC: [SOURCEPATH + '/todoMVC/index.js'],
+		weatherForecast: [SOURCEPATH + '/weather-forecast/index.js']
 	},
 	output:  {
 		path: DISTPATH,
@@ -29,7 +30,13 @@ module.exports = {
 		}),
 		new HtmlWebpackPlugin({
 			template: SOURCEPATH + '/todoMVC/index.html',
-			filename: 'todoMVC.html'
+			filename: 'todoMVC.html',
+			inject: false
+		}),
+		new HtmlWebpackPlugin({
+			template: SOURCEPATH + '/weather-forecast/index.html',
+			filename: 'weather-forecast.html',
+			inject: false
 		}),
 		new webpack.NoErrorsPlugin()
 	],

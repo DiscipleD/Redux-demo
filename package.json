@@ -10,7 +10,11 @@
     "babel-preset-stage-3": "^6.11.0",
     "html-loader": "^0.4.3",
     "html-webpack-plugin": "^2.22.0",
+    "ng-redux": "^3.3.5-beta.1",
     "redux": "^3.5.2",
+    "redux-actions": "^0.10.1",
+    "redux-logger": "^2.6.1",
+    "redux-thunk": "^2.1.0",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
   },
