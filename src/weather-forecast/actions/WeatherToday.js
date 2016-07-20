@@ -21,7 +21,7 @@ export function fetchWeatherToday(city) {
 	return dispatch => {
 		dispatch(queryWeatherToday(city))
 
-		return fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${CONFIG.APPID}`)
+		return fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&lang=zh_cn&units=metric&APPID=${CONFIG.APPID}`)
 			.then(response => response.json())
 			.then(data => dispatch(receiveWeatherToday(data)))
 	}

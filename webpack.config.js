@@ -11,8 +11,8 @@ const DISTPATH = path.join(__dirname, 'build');
 module.exports = {
 	devtool: 'source-map',
 	entry: {
-		todoMVC: [SOURCEPATH + '/todoMVC/index.js'],
-		weatherForecast: [SOURCEPATH + '/weather-forecast/index.js']
+		todoMVC: [SOURCEPATH + '/todoMVC/index.js', "webpack-dev-server/client?http://localhost:8080/", "webpack/hot/dev-server"],
+		weatherForecast: [SOURCEPATH + '/weather-forecast/index.js', "webpack-dev-server/client?http://localhost:8080/", "webpack/hot/dev-server"]
 	},
 	output:  {
 		path: DISTPATH,
@@ -24,6 +24,7 @@ module.exports = {
 	},
 	plugins: [
 		new webpack.optimize.OccurenceOrderPlugin(),
+		new webpack.HotModuleReplacementPlugin(),
 		new HtmlWebpackPlugin({
 			template: SOURCEPATH + '/index.html',
 			inject: false
@@ -52,6 +53,10 @@ module.exports = {
 				loader: 'html',
 				query: {interpolate: true},
 				include: SOURCEPATH
+			},
+			{
+				test: /\.css$/,
+				loaders: ['style', 'css']
 			}
 		]
 	}

@@ -1,0 +1,35 @@
+#weather-today-block{
+    width: 960px;
+    margin: auto;
+}
+
+#weather-today-block .city-title{
+    text-align: center;
+}
+
+#weather-today-block .weather-info{
+    float: left;
+    width: 360px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#weather-today-block .weather-info-item{
+    width: 100px;
+    text-align: center;
+}
+
+#weather-today-block label{
+    width: 200px;
+    display: inline-block;
+}
+
+#weather-detail dd{
+    line-height: 1.825;
+}
+
+#current-temperature {
+    font-size: 32px;
+}

@@ -1,0 +1,16 @@
+<section id="weather-today-block" ng-show="$ctrl.weatherToday.detail">
+	<h2 class="city-title" ng-bind="$ctrl.weatherToday.detail.name + ', ' + $ctrl.weatherToday.detail.sys.country"></h2>
+	<div class="weather-info">
+		<div class="weather-info-item" ng-repeat="weather in $ctrl.weatherToday.detail.weather">
+			<img ng-src="http://openweathermap.org/img/w/{{weather.icon}}.png">
+			<hr>
+			<p ng-bind="weather.main + '/' + weather.description"></p>
+		</div>
+	</div>
+	<dl id="weather-detail">
+		<dd><label>Current Temperature:</label><span id="current-temperature" ng-bind="$ctrl.weatherToday.detail.main.temp + ' &#8451;'"></span></dd>
+		<dd><label>Range of Temperature:</label><span ng-bind="$ctrl.weatherToday.detail.main.temp_min + '&#176;C ~ ' + $ctrl.weatherToday.detail.main.temp_max + '&#176;C'"></span></dd>
+		<dd><label>Humidity:</label><span ng-bind="$ctrl.weatherToday.detail.main.humidity + '%'"></span></dd>
+		<dd><label>Wind Speed:</label><span ng-bind="$ctrl.weatherToday.detail.wind.speed"></span></dd>
+	</dl>
+</section>

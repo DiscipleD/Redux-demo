@@ -1,0 +1,28 @@
+#query-city-block{
+    background-color: rgba(128,178,248,.8);
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#query-city-block>input{
+    width: 250px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    border: 1px solid #008cff;
+    border-radius: 4px;
+    margin-right: 8px;
+}
+
+#query-city-block>button{
+    margin: 0;
+    padding: 0 12px;
+    color: #fff;
+    height: 30px;
+    line-height: 28px;
+    background-color: #008cff;
+    border-color: #008cff;
+    border-radius: 4px;
+}

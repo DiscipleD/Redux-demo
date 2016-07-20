@@ -3,8 +3,8 @@
  */
 
 import { combineReducers } from 'redux';
-import WeatherToday from './WeatherToday';
+import weatherToday from './WeatherToday';
 
 export default combineReducers({
-	WeatherToday
+	weatherToday
 })

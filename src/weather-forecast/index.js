@@ -3,7 +3,20 @@
  */
 
 import angular from 'angular'
+import ngRedux from 'ng-redux'
+import thunkMiddleware from 'redux-thunk'
+import createLogger from 'redux-logger'
 
-import './store'
+import './assets/main.css'
+import WeatherForecastReducer from './reducers'
+import Components from './components'
 
-angular.module('WeatherForecastApp', [])
+const loggerMiddleware = createLogger()
+
+angular.module('WeatherForecastApp', [ngRedux, Components])
+	.config($ngReduxProvider => {
+		$ngReduxProvider.createStoreWith(
+			WeatherForecastReducer,
+			[thunkMiddleware, loggerMiddleware]
+		)
+	})

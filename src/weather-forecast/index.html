@@ -4,9 +4,12 @@
 	<meta charset="UTF-8">
 	<title>Weather Forecast</title>
 </head>
-<body>
+<body ng-app="WeatherForecastApp">
 
-<section ng-app="WeatherForecastApp"></section>
+<query-city query-fn=""></query-city>
+<div>
+	<today-weather-board></today-weather-board>
+</div>
 
 <script src="weatherForecast.bundle.js"></script>
 </body>

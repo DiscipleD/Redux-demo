@@ -7,7 +7,7 @@ import { QUERY_WEATHER_TODAY, RECEIVE_WEATHER_TODAY } from '../actions/WeatherTo
 export default function WeatherTodayReducer(state = {}, action) {
 	switch (action.type) {
 		case QUERY_WEATHER_TODAY:
-			return { ...state, load: true, city: action.city }
+			return { load: true, city: action.city }
 		case RECEIVE_WEATHER_TODAY:
 			return { ...state, load: false, detail: action.weatherToday}
 		default:
