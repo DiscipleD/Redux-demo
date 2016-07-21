@@ -1,0 +1,19 @@
+#weather-forecast-block{
+    width: 1180px;
+    margin: 50px auto;
+}
+
+#weather-forecast-block .city-title{
+    text-align: center;
+}
+
+#weather-forecast-block .weather-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#weather-forecast-block .weather-info-item{
+    width: 120px;
+    text-align: center;
+}

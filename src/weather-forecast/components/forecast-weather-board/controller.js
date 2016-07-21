@@ -2,7 +2,7 @@
  * Created by jack on 16-7-14.
  */
 
-export default class TodayWeatherBoardCtrl {
+export default class ForecastWeatherBoardCtrl {
 	constructor($ngRedux, $scope) {
 		const unsubscribe = $ngRedux.connect(this.mapStateToThis)(this);
 		$scope.$on('$destroy', unsubscribe);
@@ -10,7 +10,7 @@ export default class TodayWeatherBoardCtrl {
 
 	mapStateToThis(state) {
 		return {
-			weatherToday: state.weatherToday
+			weatherForecast: state.weatherForecast
 		};
 	}
 }

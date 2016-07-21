@@ -1,0 +1,11 @@
+<section id="weather-forecast-block" ng-show="$ctrl.weatherForecast.detail">
+	<h2 class="city-title" ng-bind="$ctrl.weatherForecast.detail.city.name + ', ' + $ctrl.weatherForecast.detail.city.country"></h2>
+	<div class="weather-info">
+		<div class="weather-info-item" ng-if="$index < 12" ng-repeat="forecast in $ctrl.weatherForecast.detail.list track by $index">
+			<p ng-bind="forecast.dt_txt"></p>
+			<hr>
+			<img ng-src="http://openweathermap.org/img/w/{{forecast.weather[0].icon}}.png">
+			<p ng-bind="forecast.main.temp_min + ' ~ ' + forecast.main.temp_max"></p>
+		</div>
+	</div>
+</section>

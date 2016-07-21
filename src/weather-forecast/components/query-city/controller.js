@@ -6,7 +6,12 @@ import actions from '../../actions'
 
 export default class QueryCity {
 	constructor($ngRedux, $scope) {
-		const unsubscribe = $ngRedux.connect(null, actions)(this);
-		$scope.$on('$destroy', unsubscribe);
+		const unsubscribe = $ngRedux.connect(null, actions)(this)
+		$scope.$on('$destroy', unsubscribe)
+	}
+
+	queryWeather(cityName) {
+		this.fetchWeatherToday(cityName)
+		this.fetchWeatherForecast(cityName)
 	}
 }

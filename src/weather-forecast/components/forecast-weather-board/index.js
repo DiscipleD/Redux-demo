@@ -8,11 +8,11 @@ import './style.css'
 import template from './template.html'
 import controller from './controller'
 
-const TodayWeatherBoard = {
+const ForecastWeatherBoard = {
 	controller,
 	template
 }
 
-export default angular.module('TodayWeatherBoard', [])
-	.component('todayWeatherBoard', TodayWeatherBoard)
+export default angular.module('ForecastWeatherBoard', [])
+	.component('forecastWeatherBoard', ForecastWeatherBoard)
 	.name

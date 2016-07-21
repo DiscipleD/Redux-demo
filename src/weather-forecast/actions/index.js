@@ -3,5 +3,6 @@
  */
 
 import { fetchWeatherToday } from './WeatherToday'
+import { fetchWeatherForecast } from './WeatherForecast'
 
-export default { fetchWeatherToday }
+export default { fetchWeatherToday, fetchWeatherForecast }
