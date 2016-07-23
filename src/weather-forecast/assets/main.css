@@ -5,3 +5,7 @@ html, body{
     padding: 0;
 }
 
+#weather-content{
+    width: 80%;
+    margin: auto;
+}

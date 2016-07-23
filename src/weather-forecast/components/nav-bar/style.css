@@ -1,0 +1,30 @@
+.nav-bar {
+  height: 48px;
+}
+
+.nav-bar>ul{
+  padding: 0;
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-bar-item{
+  flex: 1;
+  height: 48px;
+  text-align: center;
+  line-height: 48px;
+  cursor: pointer;
+
+  color: rgba(128,178,248,.9);
+  background-color: #fff;
+  box-shadow: 2px 2px 3px #aaa;
+}
+
+.nav-bar-item--active{
+  color: #fff;
+  background-color: rgba(128,178,248,.3);
+  box-shadow: none;
+}

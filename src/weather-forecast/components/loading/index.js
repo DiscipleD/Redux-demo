@@ -2,10 +2,10 @@
  * Created by jack on 16-7-21.
  */
 
-import angular from 'angular';
+import angular from 'angular'
 
 const loadingComponentSetting = {
-	template: `<div>loading...</div>`
+	template: `<div style="font-size: 32px">loading...</div>`
 }
 
 export default angular.module('loading', [])

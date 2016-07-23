@@ -1,0 +1,9 @@
+<nav class="nav-bar">
+	<ul>
+		<li class="nav-bar-item"
+		    ng-repeat="menuItem in $ctrl.menus track by $index"
+		    ng-class="{ 'nav-bar-item--active': $ctrl.router.currentState.name === menuItem.state }"
+		    ng-bind="menuItem.name"
+		    ng-click="$ctrl.stateGo(menuItem.state)"></li>
+	</ul>
+</nav>

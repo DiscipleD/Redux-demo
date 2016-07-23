@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "devDependencies": {
     "angular": "^1.5.7",
+    "angular-ui-router": "^0.3.1",
     "babel-loader": "^6.2.4",
     "babel-plugin-syntax-object-rest-spread": "^6.8.0",
     "babel-plugin-transform-object-rest-spread": "^6.8.0",
@@ -16,6 +17,7 @@
     "redux-actions": "^0.10.1",
     "redux-logger": "^2.6.1",
     "redux-thunk": "^2.1.0",
+    "redux-ui-router": "^0.5.2",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"

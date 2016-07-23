@@ -14,4 +14,3 @@ export default function WeatherForecastReducer(state = {}, action) {
 			return state
 	}
 }
-

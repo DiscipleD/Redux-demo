@@ -4,9 +4,10 @@
 
 import angular from 'angular'
 
-import Loading from './loading';
+import Loading from './loading'
 import QueryCity from './query-city'
+import NavBar from './nav-bar'
 import TodayWeatherBoard from './today-weather-board'
 import ForecastWeatherBoard from './forecast-weather-board'
 
-export default angular.module('Components', [Loading, QueryCity, TodayWeatherBoard, ForecastWeatherBoard]).name
+export default angular.module('Components', [Loading, QueryCity, NavBar, TodayWeatherBoard, ForecastWeatherBoard]).name
