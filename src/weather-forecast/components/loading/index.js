@@ -4,8 +4,11 @@
 
 import angular from 'angular'
 
+import './style.css'
+import template from './template.html'
+
 const loadingComponentSetting = {
-	template: `<div style="font-size: 32px">loading...</div>`
+	template
 }
 
 export default angular.module('loading', [])

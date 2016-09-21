@@ -1,0 +1,51 @@
+@keyframes circle-dash{
+	0% {
+		stroke-dasharray: 1, 125;
+		stroke-dashoffset: 0;
+	}
+	50% {
+		stroke-dasharray: 100, 125;
+		stroke-dashoffset: -25px;
+	}
+	100% {
+		stroke-dasharray: 100, 125;
+		stroke-dashoffset: -125px;
+	}
+}
+
+@keyframes rotate {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+loading{
+	text-align: center;
+	display: block;
+}
+
+.loader{
+  width: 50px;
+  position: relative;
+  display: inline-block;
+}
+
+.loader:before {
+   content: '';
+   display: block;
+   padding-top: 100%;
+}
+
+.loader .circular{
+	position: absolute;
+	top: 0;
+	left: 0;
+	animation: rotate 2s linear infinite;
+}
+
+.loader .circular circle{
+	animation: circle-dash 1.5s ease-in-out infinite;
+}

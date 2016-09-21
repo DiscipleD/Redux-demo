@@ -2,7 +2,7 @@
  * Created by jack on 16-7-13.
  */
 
-import CONFIG from '../config'
+import CONFIG from '../../config'
 
 export const QUERY_WEATHER_TODAY = 'QUERY_WEATHER_TODAY'
 export const RECEIVE_WEATHER_TODAY = 'RECEIVE_WEATHER_TODAY'
@@ -20,8 +20,8 @@ const receiveWeatherToday = weatherToday => ({
 export function fetchWeatherToday(city) {
 	return dispatch => {
 		dispatch(queryWeatherToday(city))
-
-		return fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&lang=zh_cn&units=metric&APPID=${CONFIG.APPID}`)
+console.log(CONFIG)
+		return fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&lang=zh_cn&units=metric&APPID=${CONFIG.APP_ID}`)
 			.then(response => response.json())
 			.then(data => dispatch(receiveWeatherToday(data)))
 	}

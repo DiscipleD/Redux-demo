@@ -2,7 +2,7 @@
  * Created by jack on 16-7-14.
  */
 
-import actions from '../../actions'
+import actions from '../../redux/actions'
 
 export default class QueryCity {
 	constructor($ngRedux, $scope) {

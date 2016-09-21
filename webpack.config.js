@@ -9,7 +9,7 @@ const SOURCEPATH = path.join(__dirname, 'src');
 const DISTPATH = path.join(__dirname, 'build');
 
 module.exports = {
-	devtool: 'source-map',
+	devtool: 'inline-source-map',
 	entry: {
 		todoMVC: [SOURCEPATH + '/todoMVC/index.js', "webpack-dev-server/client?http://localhost:8080/", "webpack/hot/dev-server"],
 		weatherForecast: [SOURCEPATH + '/weather-forecast/index.js', "webpack-dev-server/client?http://localhost:8080/", "webpack/hot/dev-server"]
